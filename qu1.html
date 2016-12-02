@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>问题1</title>
+	<script src="statics/js/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<h1>按要求添加事件,不能改变原来文件的内容(记得引入statics文件里的jquery，之后的问题同)</h1>
+	<div id="clickChangeToLll">这里鼠标点击后改成啦啦啦</div>
+	<div class="hoverChangeToHhh">这里鼠标移上来后改成哈哈哈</div>
+	<div id="aaa">这里鼠标双击后消失</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#aaa").dblclick(function(){
+				$("#aaa").hide();
+			});
+			$("#clickChangeToLll").click(function(){
+				$("#clickChangeToLll").html("啦啦啦");
+			});
+			$(".hoverChangeToHhh").mouseover(function(){
+				$(".hoverChangeToHhh").html("哈哈哈");//.是class,#是id
+			});
+		});
+	</script>
+</body>
+</html>
